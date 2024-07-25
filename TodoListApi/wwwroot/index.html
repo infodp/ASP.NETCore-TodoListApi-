@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>To-do CRUD</title>
+    <link rel="stylesheet" href="css/site.css"/>
+</head>
+<body>
+    <h1>To-do CRUD</h1>
+    <h3>Create</h3>
+
+    <!--<form action="javascript:void(0);" method="post" onsubmit="addItem()">
+        <input type="text" id="add-name" placeholder="New to-do"/>
+        <input type="submit" value="Save"/>
+    </form>-->
+    <form onsubmit="addItem(); return false;">
+        <input type="text" id="add-name" placeholder="New to-do" />
+        <input type="submit" value="Save" />
+    </form>
+
+    <br />
+
+    <table>
+        <tr>
+            <th>¿Is Complete?</th>
+            <th>Name</th>
+            <th>Actions</th>
+        </tr>
+        <tbody id="todos"></tbody>
+    </table>
+
+    <p id="counter"></p>
+
+    <script src="js/site.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        getItems();
+    </script>
+</body>
+</html>
